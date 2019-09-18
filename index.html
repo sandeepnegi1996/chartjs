@@ -1,0 +1,46 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <title>chart js </title>
+</head>
+<body>
+   <div class="container">
+       <canvas id="mychart">
+
+       </canvas>
+   </div>
+   <script>
+       let myChart=document.getElementById('mychart').getContext('2d');
+
+        Chart.defaults.global.defaultFontFamily='Lato';
+        Chart.defaults.global.defaultFontSize=20;
+        Chart.defaults.global.defaultFontColor='#777';
+        
+
+        let massPopChart=new Chart(myChart,{
+            type:'bar',   //line
+            data:{
+                labels:['roorkee','dehradun','banglore','delhi','coimbatore','mumbai'],
+                datasets:[
+                    {
+                        label:'population',
+                        data:[56,23,45,33,55,100],
+                        backgroundColor:['#faafeb','#2be3ce','#b8baf2','#b8f2d7','#f2e9b8','#f2cdb8'],
+                        borderWidth:4,
+                        borderColor:'#777',
+                        hoverBorderWidth:3,
+                        hoverBorderColor:'#000'
+                    }
+                  
+                ]
+            },
+            options:{}
+        })
+
+   </script>
+</body>
+</html>
